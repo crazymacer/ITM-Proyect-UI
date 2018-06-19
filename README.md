@@ -1,5 +1,5 @@
 ITM Project UI
 
-This project is for the User Interface (UI) of IMT Project.
+This project is for the User Interface (UI) of ITM Project.
 
 Powered by AdminLTE
