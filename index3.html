@@ -13,10 +13,10 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
   <!-- Morris chart -->
   <link rel="stylesheet" href="bower_components/morris.js/morris.css">
   <!-- jvectormap -->
@@ -36,13 +36,12 @@
   <![endif]-->
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Magra" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
 <body class="hold-transition skin-red sidebar-mini">
 
-<!-- Main Wrapper -->
+<!-- Wrapper -->
 <div class="wrapper">
 
   <!-- Header -->
@@ -291,7 +290,6 @@
             <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
           </ul>
         </li>
-
         <li>
           <a href="pages/widgets.html">
             <i class="fa fa-th"></i> <span>Widgets</span>
@@ -439,37 +437,9 @@
           <ul class="treeview-menu">
             <li><a href="index.html"><i class="fa fa-circle-o"></i> Registro de Equipos</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Fichas de Especificaciones</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Fichas de Mantenimiento</a></li>
+            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Fichas Técnicas</a></li>
           </ul>
         </li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-external-link-square"></i> <span>Asignación de Equipos</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i> Asignar Equipo</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Devolver Equipo</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Actas de Asignación</a></li>
-          </ul>
-        </li>
-
-        <li class="treeview">
-            <a href="#">
-              <i class="fa fa-user"></i> <span>Usuarios</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="index.html"><i class="fa fa-circle-o"></i> Asignar Equipo</a></li>
-              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Devolver Equipo</a></li>
-              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Actas de Asignación</a></li>
-            </ul>
-          </li>
 
         <li class="treeview">
             <a href="#">
@@ -479,13 +449,14 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="header">Equipos</li>
-              <li><a href="index.html"><i class="fa fa-circle-o"></i> Fabricantes</a></li>
-              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Modelos</a></li>
-              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Tipos</a></li>
-              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Categorias</a></li>
-              <li class="header">Ficha Técnica</li>
-              <li><a href="index.html"><i class="fa fa-circle-o"></i> Componentes</a></li>
+              <li class="header" style="color: #4b646f;background: #1a2226;margin: 0;">LABELS</li>
+              <li><a href="index.html"><i class="fa fa-circle-o"></i> Registro de Equipos</a></li>
+              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Fichas de Especificaciones</a></li>
+              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Fichas Técnicas</a></li>
+              <li class="header" style="color: #4b646f;background: #1a2226;">LABELS</li>
+              <li><a href="index.html"><i class="fa fa-circle-o"></i> Registro de Equipos</a></li>
+              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Fichas de Especificaciones</a></li>
+              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Fichas Técnicas</a></li>
             </ul>
           </li>
 
@@ -510,11 +481,10 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
-    </section><!-- ./Content Header -->
+    </section>
 
     <!-- Main content -->
     <section class="content">
-      
       <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-lg-3 col-xs-6">
@@ -577,8 +547,8 @@
           </div>
         </div>
         <!-- ./col -->
-      </div><!-- ./Small boxes -->
-
+      </div>
+      <!-- /.row -->
       <!-- Main row -->
       <div class="row">
         <!-- Left col -->
@@ -589,7 +559,7 @@
             <ul class="nav nav-tabs pull-right">
               <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
               <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-              <li class="pull-left header"><i class="fa fa-inbox"></i> Compra de Equipos</li>
+              <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
             </ul>
             <div class="tab-content no-padding">
               <!-- Morris chart - Sales -->
@@ -1017,15 +987,15 @@
 
     </section>
     <!-- /.content -->
-  </div><!-- /.content-wrapper -->
-
-  <!-- Footer -->
+  </div>
+  <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights reserved.
-  </footer><!-- ./Footer -->
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -1215,12 +1185,13 @@
       </div>
       <!-- /.tab-pane -->
     </div>
-  </aside><!-- /.control-sidebar -->
-
-  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
-
-</div><!-- ./Main wrapper -->
+</div>
+<!-- ./wrapper -->
 
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
