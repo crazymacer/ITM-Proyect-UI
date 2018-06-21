@@ -552,20 +552,22 @@
             <div class="row">
 
 
-              <div class="col-md-12" style=""> 
+              <div class="col-md-12"> 
 
                 <div class="col-md-6">
+                
                   <!-- fabricante -->
                 <div class="form-group">
                     <label>Tipo:</label>
                     <select class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                      <option>- - Seleccionar - -</option>
                       <option>Computadora</option>
                       <option>Laptop</option>
                       <option>Impresora</option>
                       <option>Teclado</option>
                     </select>
-                  </div><!-- /.fabricante -->
-                </div>
+                  </div>
+                </div><!-- /.fabricante -->
                 
                 <div class="col-md-6">
                   <!-- Iventory Code -->
@@ -587,6 +589,7 @@
                 <div class="form-group">
                     <label>Fabricante</label>
                     <select class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                        <option>- - Seleccionar - -</option>
                         <option value="0">Genérico</option>
                         <option value="1">HP</option>
                         <option value="2">EPSON</option>
@@ -600,6 +603,7 @@
                  <div class="form-group">
                     <label>Modelo</label>
                     <select class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                        <option>- - Seleccionar - -</option>
                       <option>Genérico</option>
                       <option>DV6-2170US</option>
                       <option>G5 250</option>
@@ -1084,7 +1088,7 @@
       showInputs: false
     })
 
-    $('#example1').DataTable({
+    var table =$('#example1').DataTable({
       'paging'      : false,
       'lengthChange': false,
       'searching'   : false,
@@ -1096,7 +1100,17 @@
         }
     })
 
+function demo_table(){
+    var rowNode = table
+    .row.add( [ 'Fiona White', 32, 'Edinburgh','','' ,''] )
+    .draw()
+    .node();
 
+ 
+    $(rowNode);
+  }
+
+demo_table();
 
     
   })
