@@ -563,7 +563,8 @@ throw new Error('AdminLTE requires jQuery')
     if (this.options.resetHeight) {
       $('body, html, ' + Selector.wrapper).css({
         'height'    : 'auto',
-        'min-height': '100%'
+        /*'min-height': '100%'*/
+        'min-height':'1006px'
       })
     }
 

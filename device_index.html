@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -533,32 +535,82 @@
     
     <section class="content">
       
-      <!-- SELECT2 EXAMPLE -->
-      <div class="box box-danger">
-          <div class="box-header with-border" style="">
+      <!-- left box-->
+      <div class="col-md-4" style="padding-left: 0;">
+        
+        <!-- Device details -->
+        <div class="box box-danger">
+          
+          <!-- box-header -->
+          <div class="box-header with-border">
             <h3 class="box-title">Datos del Equipo</h3>
-          </div>
-          <!-- /.box-header -->
-  
-          <div class="box-body">
+          </div><!-- /.box-header -->
+          
+          <!-- box-body -->
+          <div class="box-body" >
               
             <div class="row">
 
-              <div class="col-md-3">
-                <!-- fabricante -->
+
+              <div class="col-md-12" style=""> 
+
+                <div class="col-md-6">
+                  <!-- fabricante -->
                 <div class="form-group">
                     <label>Tipo:</label>
-                    <select class="form-control select2" multiple="multiple" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                    <select class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
                       <option>Computadora</option>
                       <option>Laptop</option>
                       <option>Impresora</option>
                       <option>Teclado</option>
                     </select>
                   </div><!-- /.fabricante -->
-
+                </div>
+                
+                <div class="col-md-6">
                   <!-- Iventory Code -->
                 <div class="form-group">
-                    <label>Número de Serie:</label>
+                    <label>Cod. Inventario:</label>
+    
+                    <div class="input-group" data-toggle="tooltip" data-placement="bottom" title="Este código se generará automáticamente" style="cursor: pointer;">
+                      <div class="input-group-addon">
+                        <i class="fa fa-tag" title="Este código se generará automáticamente"></i>
+                      </div>
+                      <input type="text" class="form-control" disabled value="TEAPC0001" style="cursor: pointer;">
+                    </div>
+                </div><!-- ./Iventory Code -->
+                </div>
+                
+                <div class="col-md-6">
+                
+                <!-- manufacturer -->
+                <div class="form-group">
+                    <label>Fabricante</label>
+                    <select class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                        <option value="0">Genérico</option>
+                        <option value="1">HP</option>
+                        <option value="2">EPSON</option>
+                        <option value="3">KINGSTON</option>
+                    </select>
+                  </div><!-- /.manufacturer -->
+                </div>
+                  
+                  <div class="col-md-6">
+                  <!-- model -->
+                 <div class="form-group">
+                    <label>Modelo</label>
+                    <select class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                      <option>Genérico</option>
+                      <option>DV6-2170US</option>
+                      <option>G5 250</option>
+                    </select>
+                  </div><!-- /.model -->
+                  </div>
+
+                  <div class="col-md-12">
+                  <!-- serial number -->
+                <div class="form-group">
+                    <label>Número de Serie: <small>(Dejar en blanco si no lo posee)</small></label>
     
                     <div class="input-group">
                       <div class="input-group-addon">
@@ -566,107 +618,38 @@
                       </div>
                       <input type="text" class="form-control">
                     </div>
-                  </div><!-- ./Iventory Code -->
-
-
-              </div>
-              
-                
-              <div class="col-md-3">
-
-                  <!-- Iventory Code -->
-                  <div class="form-group">
-                    <label>Cod. Inventario:</label>
-    
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-tag"></i>
-                      </div>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div><!-- ./Iventory Code -->
-
-                  
-
-                
-
-                
-
+                  </div><!-- ./serial number -->
+                </div>
                  
-
-                  <!-- fabricante -->
-                <div class="form-group">
-                    <label>Estado</label>
-                    <select class="form-control select2" multiple="multiple" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                      <option>HP</option>
-                      <option>EPSON</option>
-                      <option>KINGSTON</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div><!-- /.fabricante -->
-
-                  
-
-                
-                
-              </div>
-              <!-- /.col -->
-              <div class="col-md-3">
-
+                <div class="col-md-6">
                 <!-- fabricante -->
                 <div class="form-group">
-                    <label>Fabricante</label>
-                    <select class="form-control select2" multiple="multiple" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                      <option>HP</option>
-                      <option>EPSON</option>
-                      <option>KINGSTON</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
+                    <label>Estado</label>
+                    <select class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;" disabled>
+                      <option>Libre</option>
+                      <option>Asignado</option>
+                      <option>Baja</option>
                     </select>
                   </div><!-- /.fabricante -->
+                </div>
 
+                <div class="col-md-6">
                   <!-- fabricante -->
                 <div class="form-group">
                     <label>Condición</label>
-                    <select class="form-control select2" multiple="multiple" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                      <option>HP</option>
-                      <option>EPSON</option>
-                      <option>KINGSTON</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
+                    <select class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                      <option>Bueno</option>
+                      <option>Regular</option>
+                      <option>Malo</option>
                     </select>
                   </div><!-- /.fabricante -->
+                </div>
 
 
-                
-              </div>
-              <!-- /.col -->
-
-              <div class="col-md-3">
-
-                 <!-- fabricante -->
-                 <div class="form-group">
-                    <label>Modelo</label>
-                    <select class="form-control select2" multiple="multiple" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                      <option>HP</option>
-                      <option>EPSON</option>
-                      <option>KINGSTON</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div><!-- /.fabricante -->
+                 
 
 
-
+                <div class="col-md-12">
                 <!-- Date -->
                 <div class="form-group">
                     <label>Fecha de Inventario:</label>
@@ -680,333 +663,117 @@
                     <!-- /.input group -->
                 </div>
                 <!-- /.form group -->
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Observación</label>
+                        <textarea class="form-control" rows="3" placeholder="Ingresar una observación ..."></textarea>
+                      </div>
+                </div>
+
+                <div class="col-md-12" style="margin-bottom: 10px;">
+               
+                    <button type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Equipo</button>
+                    
+                </div>
+                <div class="col-md-12">
+                    
+                    <button type="button" class="btn btn-default btn-block"><i class="fa fa-fw  fa-close"></i> Cancelar</button>
+                </div>
+
 
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-md-12">
-                  <div class="form-group">
-                      <label>Observación</label>
-                      <textarea class="form-control" rows="3" placeholder="Ingresar una observación ..."></textarea>
-                    </div>
-              </div>
+          
+              
+            
+            <!-- /.row -->
+          </div><!-- /.box-body -->
+
+
+        </div><!-- ./Device details -->
+
+      </div><!-- ./left box-->
+
+      <!-- right box -->
+     
+          <div class="col-md-8" style="padding-right: 0;">
+             
+      
+                <div class="box box-danger">
+                  <div class="box-header">
+                    <h3 class="box-title">Especificaciones Técnicas  </h3> 
+                  </div>
+                  <div class="box-body" style="    min-height: 580px">
+                      
+      
+                      <div class="col-md-12">
+                          <div class="row" style="margin-top: 10px;margin-bottom: 20px;">
+
+                              <div class="col-md-offset-9 col-md-3" >
+                                
+                                <button type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Añadir componente</button>
+                              </div>
+                            </div>
+                        
+                      </div>
+          
+      
+                      <div class="col-md-12">
+                          <table id="example1" class="table table-bordered table-striped">
+                              <thead>
+                              <tr>
+                                <th>Componente</th>
+                                <th>Fabricante</th>
+                                <th>Modelo</th>
+                                <th>Número de Serie</th>
+                                <th>Detalle</th>
+                                <th></th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <!--
+                                <tr>
+                                <td>CPU</td>
+                                <td>Intel</td>
+                                <td>Core i7 4770K</td>
+                                <td>-</td>
+                                <td>3.90Ghz.</td>
+                                <td class="text-center"><button type="button" class="btn btn-sm btn-danger"><i class="fa fa-times-circle"></i> Quitar</button></td>
+                              </tr>
+                              <tr>
+                                <td>Memoria RAM</td>
+                                <td>Kingston</td>
+                                <td>XHK001546</td>
+                                <td>1684358481</td>
+                                <td>8GB DDR3</td>
+                                <td class="text-center"><button type="button" class="btn btn-sm btn-danger"><i class="fa fa-times-circle"></i> Quitar</button></td>
+                              </tr>-->
+                              
+                              </tbody>
+                            
+                            </table>
+                      </div>
+                    
+                      
+                  
+                  
+                  
+      
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+              
+      
+             
+            
+              <!-- /.col (right) -->
             </div>
             <!-- /.row -->
-          </div>
-          <!-- /.box-body -->
-          <div class="box-footer">
-            Ingresar en observación, algunos detalles de la condición del equipo u otros.
-          </div>
-        </div>
-        <!-- /.box -->
-
-      <div class="row">
-        <div class="col-md-6">
-
-          <div class="box box-danger">
-            <div class="box-header">
-              <h3 class="box-title">Input masks</h3>
-            </div>
-            <div class="box-body">
-              <!-- Date dd/mm/yyyy -->
-              <div class="form-group">
-                <label>Date masks:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date mm/dd/yyyy -->
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- phone mask -->
-              <div class="form-group">
-                <label>US phone mask:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-phone"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- phone mask -->
-              <div class="form-group">
-                <label>Intl US phone mask:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-phone"></i>
-                  </div>
-                  <input type="text" class="form-control"
-                         data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- IP mask -->
-              <div class="form-group">
-                <label>IP mask:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-laptop"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-          <div class="box box-info">
-            <div class="box-header">
-              <h3 class="box-title">Color & Time Picker</h3>
-            </div>
-            <div class="box-body">
-              <!-- Color Picker -->
-              <div class="form-group">
-                <label>Color picker:</label>
-                <input type="text" class="form-control my-colorpicker1">
-              </div>
-              <!-- /.form group -->
-
-              <!-- Color Picker -->
-              <div class="form-group">
-                <label>Color picker with addon:</label>
-
-                <div class="input-group my-colorpicker2">
-                  <input type="text" class="form-control">
-
-                  <div class="input-group-addon">
-                    <i></i>
-                  </div>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- time Picker -->
-              <div class="bootstrap-timepicker">
-                <div class="form-group">
-                  <label>Time picker:</label>
-
-                  <div class="input-group">
-                    <input type="text" class="form-control timepicker">
-
-                    <div class="input-group-addon">
-                      <i class="fa fa-clock-o"></i>
-                    </div>
-                  </div>
-                  <!-- /.input group -->
-                </div>
-                <!-- /.form group -->
-              </div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!-- /.col (left) -->
-        <div class="col-md-6">
-          <div class="box box-primary">
-            <div class="box-header">
-              <h3 class="box-title">Date picker</h3>
-            </div>
-            <div class="box-body">
-              <!-- Date -->
-              <div class="form-group">
-                <label>Date:</label>
-
-                <div class="input-group date">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="datepicker">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date range -->
-              <div class="form-group">
-                <label>Date range:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="reservation">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date and time range -->
-              <div class="form-group">
-                <label>Date and time range:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-clock-o"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right" id="reservationtime">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date and time range -->
-              <div class="form-group">
-                <label>Date range button:</label>
-
-                <div class="input-group">
-                  <button type="button" class="btn btn-default pull-right" id="daterange-btn">
-                    <span>
-                      <i class="fa fa-calendar"></i> Date range picker
-                    </span>
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.form group -->
-
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-          <!-- iCheck -->
-          <div class="box box-success">
-            <div class="box-header">
-              <h3 class="box-title">iCheck - Checkbox &amp; Radio Inputs</h3>
-            </div>
-            <div class="box-body">
-              <!-- Minimal style -->
-
-              <!-- checkbox -->
-              <div class="form-group">
-                <label>
-                  <input type="checkbox" class="minimal" checked>
-                </label>
-                <label>
-                  <input type="checkbox" class="minimal">
-                </label>
-                <label>
-                  <input type="checkbox" class="minimal" disabled>
-                  Minimal skin checkbox
-                </label>
-              </div>
-
-              <!-- radio -->
-              <div class="form-group">
-                <label>
-                  <input type="radio" name="r1" class="minimal" checked>
-                </label>
-                <label>
-                  <input type="radio" name="r1" class="minimal">
-                </label>
-                <label>
-                  <input type="radio" name="r1" class="minimal" disabled>
-                  Minimal skin radio
-                </label>
-              </div>
-
-              <!-- Minimal red style -->
-
-              <!-- checkbox -->
-              <div class="form-group">
-                <label>
-                  <input type="checkbox" class="minimal-red" checked>
-                </label>
-                <label>
-                  <input type="checkbox" class="minimal-red">
-                </label>
-                <label>
-                  <input type="checkbox" class="minimal-red" disabled>
-                  Minimal red skin checkbox
-                </label>
-              </div>
-
-              <!-- radio -->
-              <div class="form-group">
-                <label>
-                  <input type="radio" name="r2" class="minimal-red" checked>
-                </label>
-                <label>
-                  <input type="radio" name="r2" class="minimal-red">
-                </label>
-                <label>
-                  <input type="radio" name="r2" class="minimal-red" disabled>
-                  Minimal red skin radio
-                </label>
-              </div>
-
-              <!-- Minimal red style -->
-
-              <!-- checkbox -->
-              <div class="form-group">
-                <label>
-                  <input type="checkbox" class="flat-red" checked>
-                </label>
-                <label>
-                  <input type="checkbox" class="flat-red">
-                </label>
-                <label>
-                  <input type="checkbox" class="flat-red" disabled>
-                  Flat green skin checkbox
-                </label>
-              </div>
-
-              <!-- radio -->
-              <div class="form-group">
-                <label>
-                  <input type="radio" name="r3" class="flat-red" checked>
-                </label>
-                <label>
-                  <input type="radio" name="r3" class="flat-red">
-                </label>
-                <label>
-                  <input type="radio" name="r3" class="flat-red" disabled>
-                  Flat green skin radio
-                </label>
-              </div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-              Many more skins available. <a href="http://fronteed.com/iCheck/">Documentation</a>
-            </div>
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col (right) -->
-      </div>
-      <!-- /.row -->
+      <!-- ./right box -->
 
     </section>
     <!-- /.content -->
@@ -1242,14 +1009,19 @@
 <!-- FastClick -->
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- Page script -->
 <script>
   $(function () {
     //Initialize Select2 Elements
-    $('.select2').select2()
+    $('.select2').select2(
+     { tags: true}
+    )
 
     //Datemask dd/mm/yyyy
     $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
@@ -1311,6 +1083,22 @@
     $('.timepicker').timepicker({
       showInputs: false
     })
+
+    $('#example1').DataTable({
+      'paging'      : false,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : false,
+      'autoWidth'   : true,
+      "language": {
+            "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+        }
+    })
+
+
+
+    
   })
 </script>
 </body>
