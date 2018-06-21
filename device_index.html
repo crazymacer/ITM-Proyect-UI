@@ -703,7 +703,7 @@
 
       <!-- right box -->
      
-          <div class="col-md-8" style="padding-right: 0;">
+          <div class="col-md-8">
              
       
                 <div class="box box-danger">
@@ -726,13 +726,13 @@
           
       
                       <div class="col-md-12">
-                          <table id="example1" class="table table-bordered table-striped">
+                          <table id="example1" class="table table-bordered table-striped" style="width:100%">
                               <thead>
                               <tr>
                                 <th>Componente</th>
                                 <th>Fabricante</th>
                                 <th>Modelo</th>
-                                <th>Número de Serie</th>
+                                <th>N° Serie</th>
                                 <th>Detalle</th>
                                 <th></th>
                               </tr>
@@ -1095,6 +1095,7 @@
       'ordering'    : true,
       'info'        : false,
       'autoWidth'   : true,
+      "scrollX": true,
       "language": {
             "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
         }
@@ -1102,7 +1103,7 @@
 
 function demo_table(){
     var rowNode = table
-    .row.add( [ 'Fiona White', 32, 'Edinburgh','','' ,''] )
+    .row.add( [ 'Fiona White', 32, 'Edinburgh','','','' ] )
     .draw()
     .node();
 
