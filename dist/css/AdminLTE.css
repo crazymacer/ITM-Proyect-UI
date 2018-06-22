@@ -5686,3 +5686,13 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+
+/*Custom*/
+table tbody tr.odd, table tbody tr.even
+{
+  cursor: pointer;
+}
+table tbody tr.odd.selected, table tbody tr.even.selected
+{
+  background-color: blanchedalmond !important;
+}
