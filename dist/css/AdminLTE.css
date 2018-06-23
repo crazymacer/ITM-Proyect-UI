@@ -1837,6 +1837,7 @@ a:focus {
   margin: 0;
   line-height: 1;
   text-transform: uppercase;
+  font-weight: bold;
 }
 .box-header > .fa,
 .box-header > .glyphicon,
@@ -1993,7 +1994,7 @@ a:focus {
 .todo-list > li .text {
   display: inline-block;
   margin-left: 5px;
-  font-weight: 600;
+  /*font-weight: 600;*/
 }
 .todo-list > li .label {
   margin-left: 10px;
@@ -2263,7 +2264,7 @@ a:focus {
   color: #555;
   border-bottom: 1px solid #f4f4f4;
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.1;
 }
 .timeline > li > .timeline-item > .timeline-header > a {
@@ -3253,7 +3254,7 @@ table.text-center th {
 /*Custom*/
 .treeview-menu .header
 {
-  background: #1a2226;
+  background: #2f2f2f;
   color: darkgray;
   margin: 0;
 }
@@ -5696,3 +5697,4 @@ table tbody tr.odd.selected, table tbody tr.even.selected
 {
   background-color: blanchedalmond !important;
 }
+
