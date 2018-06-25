@@ -564,13 +564,13 @@
               <div class="col-md-12">
 
                 <!-- device-register-form  -->
-                <form id="frm-device-register">
+                <form id="device-create-frm">
 
                   <!-- device-type -->
                   <div class="col-md-6">
                     <div class="form-group">
                         <label>Tipo:</label>
-                        <select id="txt-device-type" name="txt-device-type" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                        <select name="device-create-txtType" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
                           <option value="0">- - Seleccionar - -</option>
                           <option value="1">Computadora</option>
                           <option value="2">Laptop</option>
@@ -588,7 +588,7 @@
                         <div class="input-group-addon">
                           <i class="fa fa-tag" title="Este código se generará automáticamente"></i>
                         </div>
-                        <input id="txt-device-inventory-code" name="txt-device-inventory-code" type="text" class="form-control" disabled value="TEAPC0001" style="cursor: pointer;">
+                        <input name="device-create-txtInventoryCode" type="text" class="form-control" disabled value="TEAPC0001" style="cursor: pointer;">
                       </div>
                     </div>
                   </div><!-- /.Iventory Code -->
@@ -597,7 +597,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Fabricante</label>
-                      <select id="txt-device-manufacturer" name="txt-device-manufacturer" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                      <select name="device-create-txtManufacturer" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
                           <option value="0">- - Seleccionar - -</option>
                           <option value="1">Genérico</option>
                           <option value="2">HP</option>
@@ -610,9 +610,9 @@
                   <!-- device-model -->
                   <div class="col-md-6">
                     <!-- model -->
-                  <div class="form-group">
+                    <div class="form-group">
                       <label>Modelo</label>
-                      <select id="txt-device-model" name="txt-device-model" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                      <select name="device-create-txtModel" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
                         <option value="0">- - Seleccionar - -</option>
                         <option value="1">Genérico</option>
                         <option value="2">DV6-2170US</option>
@@ -629,7 +629,7 @@
                         <div class="input-group-addon">
                           <i class="fa fa-credit-card"></i>
                         </div>
-                        <input id="txt-device-serial-number" name="txt-device-serial-number" type="text" class="form-control">
+                        <input name="device-create-txtSerialNumber" type="text" class="form-control">
                       </div>
                     </div>
                   </div><!-- /.device-serial-number -->
@@ -638,7 +638,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Estado</label>
-                      <select id="txt-device-status" name="txt-device-status" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;" disabled>
+                      <select name="device-create-txtStatus" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;" disabled>
                         <option>Libre</option>
                         <option>Asignado</option>
                         <option>Baja</option>
@@ -650,7 +650,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Condición</label>
-                      <select id="txt-device-condition" name="txt-device-condition" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                      <select name="device-create-txtCondition" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
                         <option value="1">Bueno</option>
                         <option value="2">Regular</option>
                         <option value="3">Malo</option>
@@ -666,7 +666,7 @@
                         <div class="input-group-addon">
                           <i class="fa fa-calendar"></i>
                         </div>
-                        <input id="txt-device-inventory-date" name="txt-device-inventory-date" type="text" class="form-control pull-right" id="datepicker">
+                        <input name="device-txtInventoryDate" type="text" class="form-control pull-right" id="datepicker">
                       </div>
                     </div>
                   </div><!-- /.device-inventory-date -->
@@ -675,18 +675,18 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Observación</label>
-                      <textarea id="txt-device-observation" name="txt-device-observation" class="form-control" rows="3" placeholder="Ingresar una observación ..." style="min-height: 70%;min-width: 100%;max-width: 100%;"></textarea>
+                      <textarea name="device-create-txtObservation" class="form-control" rows="3" placeholder="Ingresar una observación ..." style="min-height: 70%;min-width: 100%;max-width: 100%;"></textarea>
                     </div>
                   </div><!-- /.device-observation  -->
 
                   <!-- send-button -->
                   <div class="col-md-12" style="margin-bottom: 10px;">
-                    <button id="btn-device-submit" name="btn-device-submit" type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Equipo</button>
+                    <button id="device-create-btnSubmit" name="device-create-btnSubmit" type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Equipo</button>
                   </div><!-- /.send-button -->
 
                   <!-- cancel-button -->
                   <div class="col-md-12">
-                    <button id="btn-device-cancel" name="btn-device-cancel" type="button" class="btn btn-default btn-block"><i class="fa fa-times-circle"></i> Cancelar</button>
+                    <button id="device-create-btnCancel" name="device-create-btnCancel" type="button" class="btn btn-default btn-block"><i class="fa fa-times-circle"></i> Cancelar</button>
                   </div><!-- /.cancel-button -->
 
                 </form><!-- device-register-form  -->
@@ -721,12 +721,12 @@
                 
                 <!-- add-component-button -->
                 <div class="col-md-offset-6 col-md-3" >
-                  <button id="device-add-component" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Añadir componente</button>
+                  <button id="spec-create-btnAdd" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Añadir componente</button>
                 </div><!-- /.add-component-button -->
                 
                 <!-- remove-component-button -->
                 <div class="col-md-3" >
-                  <button id="device-remove-component" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Quitar componente</button>
+                  <button id="spec-create-btnRemove" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Quitar componente</button>
                 </div><!-- /.remove-component-button -->
 
               </div>
@@ -736,7 +736,7 @@
             <div class="col-md-12">
               
               <!-- table -->
-              <table id="device-datatable" class="table table-bordered table-striped" style="width:100%">
+              <table id="spec-datatable" class="table table-bordered table-striped" style="width:100%">
 
                 <!-- table-head -->
                 <thead>
@@ -758,18 +758,18 @@
                   <tr>
                       <td><!--dont delete - for checkbox--></td>
                       <td>
-                          <select id="txt-device-type" name="txt-device-type" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                              <option value="0">- - Seleccionar - -</option>
-                              <option value="1">Computadora</option>
-                              <option value="2">Laptop</option>
-                              <option value="3">Impresora</option>
-                              <option value="4">Teclado</option>
-                          </select>
+                        <select name="spec-create-txtComponentType[]" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                            <option value="0">- - Seleccionar - -</option>
+                            <option value="1">Computadora</option>
+                            <option value="2">Laptop</option>
+                            <option value="3">Impresora</option>
+                            <option value="4">Teclado</option>
+                        </select>
                       </td>
-                      <td><input type="text" class="form-control" name="component_manufacturer[]"></td>
-                      <td><input type="text" class="form-control" name="component_model[]"></td>
-                      <td><input type="text" class="form-control" name="component_serial_number[]"></td>
-                      <td><input type="text" class="form-control" name="component_detail[]"></td>
+                      <td><input type="text" class="form-control" name="spec_create-txtcomponentManufacturer[]"></td>
+                      <td><input type="text" class="form-control" name="spec-create-txtComponentModel[]"></td>
+                      <td><input type="text" class="form-control" name="spec-create-txtComponentSerialNumber[]"></td>
+                      <td><input type="text" class="form-control" name="spec-create-txtComponentDetail[]"></td>
                       
                   </tr>
 
@@ -1046,6 +1046,21 @@
 
   jQuery(document).ready(function ($) 
   {
+    //Verify if a row or rows is selected
+    function is_rows_selected(dt_name_initialized)
+    {
+      var rows = dt_name_initialized.rows( '.selected' );
+
+      if(rows.count()!=0)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+   
     //Initialize Select2 Elements
     $('.select2').select2({
     
@@ -1059,8 +1074,8 @@
       autoclose: true
     });
 
-    //Initialize device-datatable
-    var table =$('#device-datatable').DataTable(
+    //Initialize spec-datatable
+    var spec_datatable =$('#spec-datatable').DataTable(
     {
       'paging'      : false,
       'lengthChange': false,
@@ -1082,61 +1097,13 @@
         order: [[ 1, 'asc' ]]
 
     });
-
-    //device-datatable add item
-    function demo_table()
-    {
-      var rowNode = table
-      .row.add( [ ''
-                  ,'<select id="txt-device-type" name="txt-device-type" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">'
-                    +'<option value="0">- - Seleccionar - -</option>'
-                    +'<option value="1">Computadora</option>'
-                    +'<option value="2">Laptop</option>'
-                    +'<option value="3">Impresora</option>'
-                    +'<option value="4">Teclado</option>'
-                    +'</select>'
-                  , '<input type="text" class="form-control" name="component_manufacturer[]">'
-                  , '<input type="text" class="form-control" name="component_model[]">'
-                  , '<input type="text" class="form-control" name="component_serial_number[]">'
-                  , '<input type="text" class="form-control" name="component_serial_detail[]">'
-                ])
-      .draw()
-      .node();
-      $(rowNode);
-    };
-
-    //Get data on clic datatable-row
-    var table_row_selected=0;
-    
-    $('#device-datatable tbody').on( 'click', 'tr', function () 
-    {
-
-      //Show data on console
-      console.log( table.row( this ).data() );
-
-      //row selected
-      /*if ( $(this).hasClass('selected') ) 
-      {
-        $(this).removeClass('selected');
-        table_row_selected=0;
-      }
-      else 
-      {
-        table.$('tr.selected').removeClass('selected');
-        $(this).addClass('selected');
-        table_row_selected=1;
-      }
-      */
-    });
-
-    //device-datatable remove component 
-    $('#device-remove-component').click( function () {
+   
+    //spec-datatable remove component 
+    $('#spec-create-btnRemove').click( function () {
       
-      var rows = table.rows( '.selected' );
-
-      if(rows.count()!=0)
+      if(is_rows_selected(spec_datatable))
       {
-        table.rows('.selected').remove().draw( false );
+        spec_datatable.rows('.selected').remove().draw( false );
       }
       else
       {
@@ -1145,21 +1112,36 @@
     
     });
 
-    //device-datatable add component
-    $('#device-add-component').click( function () {
-      demo_table();
+    //spec-datatable add component
+    $('#spec-create-btnAdd').click( function () {
+      var rowNode = spec_datatable
+      .row.add( [ ''
+                  ,'<select name="spec-create-txtComponentType[]" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">'
+                    +'<option value="0">- - Seleccionar - -</option>'
+                    +'<option value="1">Computadora</option>'
+                    +'<option value="2">Laptop</option>'
+                    +'<option value="3">Impresora</option>'
+                    +'<option value="4">Teclado</option>'
+                    +'</select>'
+                  , '<input type="text" class="form-control" name="spec_create-txtcomponentManufacturer[]">'
+                  , '<input type="text" class="form-control" name="spec-create-txtComponentModel[]">'
+                  , '<input type="text" class="form-control" name="spec-create-txtComponentSerialNumber[]">'
+                  , '<input type="text" class="form-control" name="spec-create-txtComponentDetail[]">'
+                ])
+      .draw()
+      .node();
+      $(rowNode);
     });
 
-    //device-datable add example row
-    //demo_table();
-
-    //device submit button
-    $("#btn-device-submit").click(function()
+     //device submit button
+    $("#device-create-btnSubmit").click(function()
     {
-      var device_data = $("#frm-device-register").serialize();
+      //Get device data
+      var device_data = $("#device-create-frm").serialize();
       console.log(device_data);
 
-      var device_component_data = table.$('input, select').serialize();
+      //Get spec data
+      var device_component_data = spec_datatable.$('input, select').serialize();
       console.log(device_component_data);
 
       swal("Muy Bien!", "El equipo ha sido registrado.", "success");
