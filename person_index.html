@@ -529,11 +529,11 @@
     
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Equipos<small>Registro de Equipos</small></h1>
+      <h1>Persona<small>Registro de Personas</small></h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Equipos</a></li>
-        <li class="active">Registrar Equipo</li>
+        <li><a href="#">Persona</a></li>
+        <li class="active">Registro de Personas</li>
       </ol>
     </section>
 
@@ -546,17 +546,16 @@
         <!-- right box -->
         <div class="col-md-12">
         
-          <!-- devices-list -->
+          <!-- person-list -->
           <div class="box box-danger">
   
             <!-- box-header -->
             <div class="box-header">
-              <h3 class="box-title">Registro de Equipos  </h3> 
+              <h3 class="box-title">Registro de Personas  </h3> 
             </div><!-- /.box-header -->
   
             <!-- box-body -->
             <div class="box-body" style="min-height: 580px">
-              
               
               <!-- actions-buttons -->
               <div class="col-md-12">
@@ -564,40 +563,41 @@
                   
                   <!-- register-device-button -->
                   <div class="col-md-2" style="margin-bottom: 10px;">
-                    <button id="device-btnCreate" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Registrar Equipo</button>
+                    <button id="person-btnCreate" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Registrar Persona</button>
                   </div><!-- /.register-device-button -->
                   
                   <!-- view-device-button -->
                   <div class="col-md-2" style="margin-bottom: 10px;">
-                    <button id="device-btnRead" type="button" class="btn btn-block btn-default"><i class="fa fa-eye" style="padding-right: 5px"></i> Ver Equipo</button>
+                    <button id="person-btnRead" type="button" class="btn btn-block btn-default"><i class="fa fa-eye" style="padding-right: 5px"></i> Ver Persona</button>
                   </div><!-- /.view-device-button -->
 
                   <!-- edit-component-button -->
                   <div class="col-md-2" style="margin-bottom: 10px;">
-                      <button id="device-btnUpdate" type="button" class="btn btn-block btn-default"><i class="fa fa-edit" style="padding-right: 5px"></i> Modificar Equipo</button>
+                      <button id="person-btnUpdate" type="button" class="btn btn-block btn-default"><i class="fa fa-edit" style="padding-right: 5px"></i> Modificar Persona</button>
                     </div><!-- /.edit-component-button -->
   
                 </div>
               </div><!-- /.actions-buttons -->
               
-              <!-- devices-list-datatable -->
+              <!-- person-list-datatable -->
               <div class="col-md-12">
                 
                 <!-- table -->
-                <table id="device-datatable" class="table table-bordered table-striped" style="width:100%">
+                <table id="person-datatable" class="table table-bordered table-striped" style="width:100%">
   
                   <!-- table-head -->
                   <thead>
   
                     <!-- columns-name -->
                     <tr>
-                        <th class="text-center">Cod. Inventario</th>
-                        <th class="text-center">Tipo</th>
-                        <th class="text-center">Marca</th>
-                        <th class="text-center">Modelo</th>
-                        <th class="text-center">Serie</th>
-                        <th class="text-center">Condicion</th>
-                        <th class="text-center">Estado</th>
+                        <th class="text-center">DNI</th>
+                        <th class="text-center">Nombres</th>
+                        <th class="text-center">Apellido Paterno</th>
+                        <th class="text-center">Apellido Materno</th>
+                        <th class="text-center">Género</th>
+                        <th class="text-center">Teléfono</th>
+                        <th class="text-center">Correo</th>
+                        <th class="text-center">Empleado</th>
                     </tr><!-- /.columns-name -->
   
                   </thead><!-- /.table-head -->
@@ -605,28 +605,17 @@
                   <!-- table-body -->
                   <tbody>
                     <tr>
-                        <td class="text-center">TEALT0001</td>
-                        <td class="text-center">Laptop</td>
-                        <td class="text-center">HP</td>
-                        <td class="text-center">DV6-2170US</td>
-                        <td class="text-center">SD184SD18</td>
-                        <td class="text-center">Bueno</td>
-                        <td class="text-center">Libre</td>
+                        <td class="text-center">71546512</td>
+                        <td class="text-center">Daniel</td>
+                        <td class="text-center">Rodriguez</td>
+                        <td class="text-center">Perez</td>
+                        <td class="text-center">Masculino</td>
+                        <td class="text-center">957456214</td>
+                        <td class="text-center">daniel.perez@mail.com</td>
+                        <td class="text-center">Si</td>
                         
                     </tr>
-
-                    <tr>
-                        <td class="text-center">TEAPC0001</td>
-                        <td class="text-center">Computadora</td>
-                        <td class="text-center">Genérico</td>
-                        <td class="text-center">Genénrico</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">Bueno</td>
-                        <td class="text-center">Libre</td>
-                        
-                    </tr>
-  
-                                   
+                                  
                   </tbody><!-- /.table-body -->
                   
                 </table><!-- /.table -->
@@ -635,7 +624,7 @@
               
             </div><!-- /.box-body -->
   
-          </div><!-- /.devices-list -->
+          </div><!-- /.person-list -->
           
         </div><!-- /.right box -->
 
@@ -904,7 +893,7 @@
   {
  
     //Initialize device-datatable
-    var device_datatable =$('#device-datatable').DataTable(
+    var person_datatable =$('#person-datatable').DataTable(
     {
       'paging'      : true,
       'lengthChange': false,
@@ -918,11 +907,11 @@
     });
 
     //On clic device-datatable row
-    $('#device-datatable tbody').on( 'click', 'tr', function () 
+    $('#person-datatable tbody').on( 'click', 'tr', function () 
     {
 
       //Show data on console
-      console.log( device_datatable.row( this ).data() );
+      console.log( person_datatable.row( this ).data() );
 
       //select row
       if ( $(this).hasClass('selected') ) 
@@ -931,18 +920,18 @@
       }
       else 
       {
-        device_datatable.$('tr.selected').removeClass('selected');
+        person_datatable.$('tr.selected').removeClass('selected');
         $(this).addClass('selected');
       }
       
     });
 
     //View device
-    $('#device-btnRead').click( function () 
+    $('#person-btnRead').click( function () 
     {
-      if(is_row_selected(device_datatable))
+      if(is_row_selected(person_datatable))
       {
-        swal("Genial!", "Detalles del Equipo con API.", "success");
+        swal("Genial!", "Detalles de la Persona con API.", "success");
       }
       else
       {
@@ -952,15 +941,15 @@
     });
 
      //Edit device
-    $('#device-btnUpdate').click( function () 
+    $('#person-btnUpdate').click( function () 
     {
-      if(is_row_selected(device_datatable))
+      if(is_row_selected(person_datatable))
       {
-        swal("Genial!", "IR a la edicion del Equipo.", "success");
+        swal("Genial!", "IR a la edicion de la persona.", "success");
       }
       else
       {
-        swal("Faltó un paso!", "Primero debes seleccionar una equipo.", "warning");
+        swal("Faltó un paso!", "Primero debes seleccionar una persona.", "warning");
       }
     
     });

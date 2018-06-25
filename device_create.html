@@ -539,254 +539,261 @@
         <li class="active">Registrar Equipo</li>
       </ol>
     </section>
-
-    <!-- main-content -->
-    <section class="content">
-      
-      <!-- left-box-->
-      <div class="col-md-4" style="padding-left: 0;">
+    
+    <div class="row">
+      <!-- main-content -->
+      <section class="content">
         
-        <!-- device-details -->
-        <div class="box box-danger">
+        <!-- main-row -->
+        <div class="row">
           
-          <!-- box-header -->
-          <div class="box-header with-border">
-            <h3 class="box-title">Datos del Equipo</h3>
-          </div><!-- /.box-header -->
+          <!-- left-box-->
+          <div class="col-md-4">
           
-          <!-- box-body -->
-          <div class="box-body" >
-            
-            <!-- box-body-row-->
-            <div class="row">
-
-              <!-- box-body-col -->
-              <div class="col-md-12">
-
-                <!-- device-register-form  -->
-                <form id="device-create-frm">
-
-                  <!-- device-type -->
-                  <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Tipo:</label>
-                        <select name="device-create-txtType" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                          <option value="0">- - Seleccionar - -</option>
-                          <option value="1">Computadora</option>
-                          <option value="2">Laptop</option>
-                          <option value="3">Impresora</option>
-                          <option value="4">Teclado</option>
-                        </select>
-                      </div>
-                  </div><!-- /.device-type -->
-
-                  <!-- Iventory Code -->
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Cod. Inventario:</label>
-                      <div class="input-group" data-toggle="tooltip" data-placement="bottom" title="Este código se generará automáticamente" style="cursor: pointer;">
-                        <div class="input-group-addon">
-                          <i class="fa fa-tag" title="Este código se generará automáticamente"></i>
-                        </div>
-                        <input name="device-create-txtInventoryCode" type="text" class="form-control" disabled value="TEAPC0001" style="cursor: pointer;">
-                      </div>
-                    </div>
-                  </div><!-- /.Iventory Code -->
-                  
-                  <!-- manufacturer -->
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Fabricante</label>
-                      <select name="device-create-txtManufacturer" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                          <option value="0">- - Seleccionar - -</option>
-                          <option value="1">Genérico</option>
-                          <option value="2">HP</option>
-                          <option value="3">EPSON</option>
-                          <option value="4">KINGSTON</option>
-                      </select>
-                    </div>
-                  </div><!-- /.manufacturer -->
-                    
-                  <!-- device-model -->
-                  <div class="col-md-6">
-                    <!-- model -->
-                    <div class="form-group">
-                      <label>Modelo</label>
-                      <select name="device-create-txtModel" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                        <option value="0">- - Seleccionar - -</option>
-                        <option value="1">Genérico</option>
-                        <option value="2">DV6-2170US</option>
-                        <option value="3">G5 250</option>
-                      </select>
-                    </div>
-                  </div><!-- /.device-model -->
-
-                  <!-- device-serial-number -->
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Número de Serie: <small>(Dejar en blanco si no lo posee)</small></label>
-                      <div class="input-group">
-                        <div class="input-group-addon">
-                          <i class="fa fa-credit-card"></i>
-                        </div>
-                        <input name="device-create-txtSerialNumber" type="text" class="form-control">
-                      </div>
-                    </div>
-                  </div><!-- /.device-serial-number -->
-                  
-                  <!-- device-status -->
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Estado</label>
-                      <select name="device-create-txtStatus" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;" disabled>
-                        <option>Libre</option>
-                        <option>Asignado</option>
-                        <option>Baja</option>
-                      </select>
-                    </div>
-                  </div><!-- /.device-status -->
-
-                  <!-- device-condition -->
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Condición</label>
-                      <select name="device-create-txtCondition" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                        <option value="1">Bueno</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Malo</option>
-                      </select>
-                    </div>
-                  </div><!-- /.device-condition -->
-
-                  <!-- device-inventory-date -->
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Fecha de Inventario:</label>
-                      <div class="input-group date">
-                        <div class="input-group-addon">
-                          <i class="fa fa-calendar"></i>
-                        </div>
-                        <input name="device-txtInventoryDate" type="text" class="form-control pull-right" id="datepicker">
-                      </div>
-                    </div>
-                  </div><!-- /.device-inventory-date -->
-
-                  <!-- device-observation  -->
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Observación</label>
-                      <textarea name="device-create-txtObservation" class="form-control" rows="3" placeholder="Ingresar una observación ..." style="min-height: 70%;min-width: 100%;max-width: 100%;"></textarea>
-                    </div>
-                  </div><!-- /.device-observation  -->
-
-                  <!-- send-button -->
-                  <div class="col-md-12" style="margin-bottom: 10px;">
-                    <button id="device-create-btnSubmit" name="device-create-btnSubmit" type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Equipo</button>
-                  </div><!-- /.send-button -->
-
-                  <!-- cancel-button -->
-                  <div class="col-md-12">
-                    <button id="device-create-btnCancel" name="device-create-btnCancel" type="button" class="btn btn-default btn-block"><i class="fa fa-times-circle"></i> Cancelar</button>
-                  </div><!-- /.cancel-button -->
-
-                </form><!-- device-register-form  -->
-
-              </div><!-- /.box-body-col -->
-
-            </div><!-- /.box-body-row -->
-
-          </div><!-- /.box-body -->
-
-        </div><!-- /.device-details -->
-
-      </div><!-- /.left-box-->
-
-      <!-- right box -->
-      <div class="col-md-8">
-        
-        <!-- device-specs -->
-        <div class="box box-danger">
-
-          <!-- box-header -->
-          <div class="box-header">
-            <h3 class="box-title">Especificaciones Técnicas  </h3> 
-          </div><!-- /.box-header -->
-
-          <!-- box-body -->
-          <div class="box-body" style="min-height: 580px">
-            
-            <!-- device-specs-buttons -->
-            <div class="col-md-12">
-              <div class="row" style="margin-top: 10px;margin-bottom: 20px;">
-                
-                <!-- add-component-button -->
-                <div class="col-md-offset-6 col-md-3" >
-                  <button id="spec-create-btnAdd" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Añadir componente</button>
-                </div><!-- /.add-component-button -->
-                
-                <!-- remove-component-button -->
-                <div class="col-md-3" >
-                  <button id="spec-create-btnRemove" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Quitar componente</button>
-                </div><!-- /.remove-component-button -->
-
-              </div>
-            </div><!-- device-specs-buttons -->
-            
-            <!-- device-specs-datatable -->
-            <div class="col-md-12">
+            <!-- device-details -->
+            <div class="box box-danger">
               
-              <!-- table -->
-              <table id="spec-datatable" class="table table-bordered table-striped" style="width:100%">
-
-                <!-- table-head -->
-                <thead>
-
-                  <!-- columns-name -->
-                  <tr>
-                      <th><!--dont delete - for checkbox--></th>
-                      <th class="text-center">Componente</th>
-                      <th class="text-center">Fabricante</th>
-                      <th class="text-center">Modelo</th>
-                      <th class="text-center"># Serie</th>
-                      <th class="text-center">Detalle</th>
-                  </tr><!-- /.columns-name -->
-
-                </thead><!-- /.table-head -->
-
-                <!-- table-body -->
-                <tbody>
-                  <tr>
-                      <td><!--dont delete - for checkbox--></td>
-                      <td>
-                        <select name="spec-create-txtComponentType[]" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                            <option value="0">- - Seleccionar - -</option>
-                            <option value="1">Computadora</option>
-                            <option value="2">Laptop</option>
-                            <option value="3">Impresora</option>
-                            <option value="4">Teclado</option>
-                        </select>
-                      </td>
-                      <td><input type="text" class="form-control" name="spec_create-txtcomponentManufacturer[]"></td>
-                      <td><input type="text" class="form-control" name="spec-create-txtComponentModel[]"></td>
-                      <td><input type="text" class="form-control" name="spec-create-txtComponentSerialNumber[]"></td>
-                      <td><input type="text" class="form-control" name="spec-create-txtComponentDetail[]"></td>
-                      
-                  </tr>
-
-                                 
-                </tbody><!-- /.table-body -->
+              <!-- box-header -->
+              <div class="box-header with-border">
+                <h3 class="box-title">Datos del Equipo</h3>
+              </div><!-- /.box-header -->
+              
+              <!-- box-body -->
+              <div class="box-body" >
                 
-              </table><!-- /.table -->
-
-            </div><!-- /.device-specs-datatable -->
+                <!-- box-body-row-->
+                <div class="row">
+    
+                  <!-- box-body-col -->
+                  <div class="col-md-12">
+    
+                    <!-- device-register-form  -->
+                    <form id="device-create-frm">
+    
+                      <!-- device-type -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Tipo:</label>
+                            <select name="device-create-txtType" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                              <option value="0">- - Seleccionar - -</option>
+                              <option value="1">Computadora</option>
+                              <option value="2">Laptop</option>
+                              <option value="3">Impresora</option>
+                              <option value="4">Teclado</option>
+                            </select>
+                          </div>
+                      </div><!-- /.device-type -->
+    
+                      <!-- Iventory Code -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Cod. Inventario:</label>
+                          <div class="input-group" data-toggle="tooltip" data-placement="bottom" title="Este código se generará automáticamente" style="cursor: pointer;">
+                            <div class="input-group-addon">
+                              <i class="fa fa-tag" title="Este código se generará automáticamente"></i>
+                            </div>
+                            <input name="device-create-txtInventoryCode" type="text" class="form-control" disabled value="TEAPC0001" style="cursor: pointer;">
+                          </div>
+                        </div>
+                      </div><!-- /.Iventory Code -->
+                      
+                      <!-- manufacturer -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Fabricante</label>
+                          <select name="device-create-txtManufacturer" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                              <option value="0">- - Seleccionar - -</option>
+                              <option value="1">Genérico</option>
+                              <option value="2">HP</option>
+                              <option value="3">EPSON</option>
+                              <option value="4">KINGSTON</option>
+                          </select>
+                        </div>
+                      </div><!-- /.manufacturer -->
+                        
+                      <!-- device-model -->
+                      <div class="col-md-6">
+                        <!-- model -->
+                        <div class="form-group">
+                          <label>Modelo</label>
+                          <select name="device-create-txtModel" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                            <option value="0">- - Seleccionar - -</option>
+                            <option value="1">Genérico</option>
+                            <option value="2">DV6-2170US</option>
+                            <option value="3">G5 250</option>
+                          </select>
+                        </div>
+                      </div><!-- /.device-model -->
+    
+                      <!-- device-serial-number -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Número de Serie: <small>(Dejar en blanco si no lo posee)</small></label>
+                          <div class="input-group">
+                            <div class="input-group-addon">
+                              <i class="fa fa-credit-card"></i>
+                            </div>
+                            <input name="device-create-txtSerialNumber" type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div><!-- /.device-serial-number -->
+                      
+                      <!-- device-status -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Estado</label>
+                          <select name="device-create-txtStatus" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;" disabled>
+                            <option>Libre</option>
+                            <option>Asignado</option>
+                            <option>Baja</option>
+                          </select>
+                        </div>
+                      </div><!-- /.device-status -->
+    
+                      <!-- device-condition -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Condición</label>
+                          <select name="device-create-txtCondition" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                            <option value="1">Bueno</option>
+                            <option value="2">Regular</option>
+                            <option value="3">Malo</option>
+                          </select>
+                        </div>
+                      </div><!-- /.device-condition -->
+    
+                      <!-- device-inventory-date -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Fecha de Inventario:</label>
+                          <div class="input-group date">
+                            <div class="input-group-addon">
+                              <i class="fa fa-calendar"></i>
+                            </div>
+                            <input name="device-txtInventoryDate" type="text" class="form-control pull-right" id="datepicker">
+                          </div>
+                        </div>
+                      </div><!-- /.device-inventory-date -->
+    
+                      <!-- device-observation  -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Observación</label>
+                          <textarea name="device-create-txtObservation" class="form-control" rows="3" placeholder="Ingresar una observación ..." style="min-height: 70%;min-width: 100%;max-width: 100%;"></textarea>
+                        </div>
+                      </div><!-- /.device-observation  -->
+    
+                      <!-- send-button -->
+                      <div class="col-md-12" style="margin-bottom: 10px;">
+                        <button id="device-create-btnSubmit" name="device-create-btnSubmit" type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Equipo</button>
+                      </div><!-- /.send-button -->
+    
+                      <!-- cancel-button -->
+                      <div class="col-md-12">
+                        <button id="device-create-btnCancel" name="device-create-btnCancel" type="button" class="btn btn-default btn-block"><i class="fa fa-times-circle"></i> Cancelar</button>
+                      </div><!-- /.cancel-button -->
+    
+                    </form><!-- device-register-form  -->
+    
+                  </div><!-- /.box-body-col -->
+    
+                </div><!-- /.box-body-row -->
+    
+              </div><!-- /.box-body -->
+    
+            </div><!-- /.device-details -->
+    
+          </div><!-- /.left-box-->
+    
+          <!-- right box -->
+          <div class="col-md-8">
             
-          </div><!-- /.box-body -->
+            <!-- device-specs -->
+            <div class="box box-danger">
+    
+              <!-- box-header -->
+              <div class="box-header">
+                <h3 class="box-title">Especificaciones Técnicas  </h3> 
+              </div><!-- /.box-header -->
+    
+              <!-- box-body -->
+              <div class="box-body" style="min-height: 580px">
+                
+                <!-- device-specs-buttons -->
+                <div class="col-md-12">
+                  <div class="row" style="margin-top: 10px;margin-bottom: 20px;">
+                    
+                    <!-- add-component-button -->
+                    <div class="col-md-offset-6 col-md-3" >
+                      <button id="spec-create-btnAdd" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Añadir componente</button>
+                    </div><!-- /.add-component-button -->
+                    
+                    <!-- remove-component-button -->
+                    <div class="col-md-3" >
+                      <button id="spec-create-btnRemove" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Quitar componente</button>
+                    </div><!-- /.remove-component-button -->
+    
+                  </div>
+                </div><!-- device-specs-buttons -->
+                
+                <!-- device-specs-datatable -->
+                <div class="col-md-12">
+                  
+                  <!-- table -->
+                  <table id="spec-datatable" class="table table-bordered table-striped" style="width:100%">
+    
+                    <!-- table-head -->
+                    <thead>
+    
+                      <!-- columns-name -->
+                      <tr>
+                          <th><!--dont delete - for checkbox--></th>
+                          <th class="text-center">Componente</th>
+                          <th class="text-center">Fabricante</th>
+                          <th class="text-center">Modelo</th>
+                          <th class="text-center"># Serie</th>
+                          <th class="text-center">Detalle</th>
+                      </tr><!-- /.columns-name -->
+    
+                    </thead><!-- /.table-head -->
+    
+                    <!-- table-body -->
+                    <tbody>
+                      <tr>
+                          <td><!--dont delete - for checkbox--></td>
+                          <td>
+                            <select name="spec-create-txtComponentType[]" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                                <option value="0">- - Seleccionar - -</option>
+                                <option value="1">Computadora</option>
+                                <option value="2">Laptop</option>
+                                <option value="3">Impresora</option>
+                                <option value="4">Teclado</option>
+                            </select>
+                          </td>
+                          <td><input type="text" class="form-control" name="spec_create-txtcomponentManufacturer[]"></td>
+                          <td><input type="text" class="form-control" name="spec-create-txtComponentModel[]"></td>
+                          <td><input type="text" class="form-control" name="spec-create-txtComponentSerialNumber[]"></td>
+                          <td><input type="text" class="form-control" name="spec-create-txtComponentDetail[]"></td>
+                          
+                      </tr>
+    
+                                     
+                    </tbody><!-- /.table-body -->
+                    
+                  </table><!-- /.table -->
+    
+                </div><!-- /.device-specs-datatable -->
+                
+              </div><!-- /.box-body -->
+    
+            </div><!-- /.device-specs -->
+            
+          </div><!-- /.right box -->
 
-        </div><!-- /.device-specs -->
-        
-      </div><!-- /.right box -->
-
-    </section><!-- /.main-content -->
+        </div><!-- /.main-row -->
+  
+      </section><!-- /.main-content -->
+    </div>
    
   </div><!-- /.content-wrapper -->
 
