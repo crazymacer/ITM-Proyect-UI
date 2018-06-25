@@ -529,14 +529,11 @@
     
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Usuario
-        <small>Registrar Usuario</small>
-      </h1>
+      <h1>Persona<small>Registrar Persona</small></h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Usuario</a></li>
-        <li class="active">Registrar Usuario</li>
+        <li><a href="#">Persona</a></li>
+        <li class="active">Registrar Persona</li>
       </ol>
     </section>
 
@@ -547,34 +544,32 @@
         <!-- left-box-->
       <div class="col-md-12" >
         
-        <!-- device-details -->
+        <!-- person-information -->
         <div class="box box-danger">
           
           <!-- box-header -->
           <div class="box-header with-border">
-            <h3 class="box-title">Datos del Usuario</h3>
+            <h3 class="box-title">Datos de la Persona</h3>
           </div><!-- /.box-header -->
           
           <!-- box-body -->
           <div class="box-body" >
-            
            
-
               <!-- box-body-col -->
               <div class="col-md-12">
 
-                <!-- user-register-form  -->
-                <form id="frm-user-register">
+                <!-- person-register-form  -->
+                <form id="person-create-frm">
 
-                    <div class="callout callout-default">
-                      <h4>Datos Personales</h4>
-      
-                      <p>Ingrese la información básica de la persona</p>
-                    </div>
+                  <div class="callout callout-default">
+                    <h4>Datos Personales</h4>
+                    <p>Ingrese la información básica de la persona</p>
+                  </div>
                   
                   <!-- row-1 -->
                   <div class="row">
-                    <!-- user-dni -->
+
+                    <!-- person-dni -->
                     <div class="col-md-3">
                       <div class="form-group">
                         <label>DNI: <small></small></label>
@@ -582,12 +577,12 @@
                           <div class="input-group-addon">
                             <i class="fa fa-credit-card"></i>
                           </div>
-                          <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
+                          <input name="person-create-txtDNI" type="text" class="form-control">
                         </div>
                       </div>
-                    </div><!-- /.user-dni -->
+                    </div><!-- /.person-dni -->
 
-                    <!-- user-name -->
+                    <!-- person-name -->
                     <div class="col-md-3">
                       <div class="form-group">
                         <label>Nombres: <small></small></label>
@@ -595,12 +590,12 @@
                           <div class="input-group-addon">
                             <i class="fa fa-user"></i>
                           </div>
-                          <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
+                          <input name="person-create-txtName" type="text" class="form-control">
                         </div>
                       </div>
-                    </div><!-- /.user-name -->
+                    </div><!-- /.person-name -->
                     
-                    <!-- user-last-name-1 -->
+                    <!-- person-last-name-1 -->
                     <div class="col-md-3">
                       <div class="form-group">
                         <label>Apellido Paterno: <small></small></label>
@@ -608,12 +603,12 @@
                           <div class="input-group-addon">
                             <i class="fa fa-user"></i>
                           </div>
-                          <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
+                          <input name="person-create-txtLastName1" type="text" class="form-control">
                         </div>
                       </div>
-                    </div><!-- /.user-last-name-1 -->
+                    </div><!-- /.person-last-name-1 -->
 
-                    <!-- user-last-name-2 -->
+                    <!-- person-last-name-2 -->
                     <div class="col-md-3">
                       <div class="form-group">
                         <label>Apellido Materno:</label>
@@ -621,33 +616,34 @@
                           <div class="input-group-addon">
                             <i class="fa fa-user"></i>
                           </div>
-                          <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
+                          <input name="person-create-txtLastName2" type="text" class="form-control">
                         </div>
                       </div>
-                    </div><!-- /.duser-last-name-2 -->
+                    </div><!-- /.person-last-name-2 -->
+
                   </div><!-- /.row-1 -->
 
                   <!-- row-2 -->
                   <div class="row">
 
-                    <!-- user-last-name-2 -->
+                    <!-- person-address -->
                     <div class="col-md-3">
-                        <div class="form-group">
-                          <label>Dirección / Departamento / Ciudad:</label>
-                          <div class="input-group">
-                            <div class="input-group-addon">
-                              <i class="fa fa-home"></i>
-                            </div>
-                            <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
+                      <div class="form-group">
+                        <label>Dirección / Departamento / Ciudad:</label>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                            <i class="fa fa-home"></i>
                           </div>
+                          <input name="person-create-txtAddress" type="text" class="form-control">
                         </div>
-                      </div><!-- /.duser-last-name-2 -->
+                      </div>
+                    </div><!-- /.person-address -->
 
                     <!-- user-genre -->
                     <div class="col-md-3">
                       <div class="form-group">
                         <label>Género:</label>
-                        <select id="txt-device-model" name="txt-device-model" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                        <select name="person-create-txtGenre" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
                           <option value="0">- - Seleccionar - -</option>
                           <option value="1">Masculino</option>
                           <option value="2">Femenino</option>
@@ -663,7 +659,7 @@
                           <div class="input-group-addon">
                             <i class="fa fa-phone"></i>
                           </div>
-                          <input id="txt-device-serial-number" name="txt-device-serial-number" type="text" class="form-control">
+                          <input name="person-create-txtPhone" type="text" class="form-control">
                         </div>
                       </div>
                     </div><!-- /.user-phone-number -->
@@ -676,40 +672,65 @@
                           <div class="input-group-addon">
                             <i class="fa fa-envelope-o"></i>
                           </div>
-                          <input id="txt-device-serial-number" name="txt-device-serial-number" type="text" class="form-control">
+                          <input name="person-create-txtEmail" type="text" class="form-control">
                         </div>
                       </div>
                     </div><!-- /.user-personal-mail -->
+
                   </div><!-- /.row-2 -->
 
+                  <!-- Is Employee -->
                   <div class="row">
-                      <div class="form-group">
-                          <div class="col-lg-12">
-                            <div class="checkbox">
-                              <label>
-                                <input id="user-is-employee" type="checkbox"> Es empleado
-                              </label>
-                            </div>
-                          </div>
+                    <div class="form-group">
+                      <div class="col-lg-12">
+                        <div class="checkbox">
+                          <label>
+                            <input id="user-is-employee" type="checkbox"> Es empleado
+                          </label>
                         </div>
-                  </div>
+                      </div>
+                    </div>
+                  </div><!-- /.Is Employee -->
 
                   <hr>
 
-                  
-
                   <!-- row-3 -->
-                  <div id="user-employee-data" class="row" style="display: none">
+                  <div id="user-employee-data" class="row" style="display: none;margin-bottom: 50px;">
 
-                      <div class="col-md-12">
-                          <div class="callout callout-default">
-                              <h4>Información Laboral</h4>
-              
-                              <p>Ingrese la información laboral de la persona</p>
-                            </div>
+                    <div class="col-md-12" style="margin-bottom: 30px;">
+                        <div class="callout callout-default">
+                            <h4>Información Laboral</h4>
+                            <p>Ingrese la información laboral de la persona</p>
+                          </div>
+                    </div>
+
+                    <!-- employee-area -->
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Área:</label>
+                        <select name="employee-create-txtArea" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                          <option value="0">- - Seleccionar - -</option>
+                          <option value="1">Gerencia de Obras</option>
+                          <option value="2">Sistemas</option>
+                          <option value="3">Soporte Técnico</option>
+                        </select>
                       </div>
+                    </div><!-- /.employee-area -->
 
-                    <!-- user-corporate-mail -->
+                    <!-- employee-job-title -->
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Cargo:</label>
+                        <select name="employee-create-txtJobTitle" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                          <option value="0">- - Seleccionar - -</option>
+                          <option value="1">Responsable</option>
+                          <option value="2">Asistente</option>
+                          <option value="3">Auxiliar</option>
+                        </select>
+                      </div>
+                    </div><!-- /.device-model -->
+
+                    <!-- employee-corporate-mail -->
                     <div class="col-md-4">
                       <div class="form-group">
                         <label>Correo electrónico Corporativo:</label>
@@ -720,65 +741,36 @@
                           <input id="txt-device-serial-number" name="txt-device-serial-number" type="text" class="form-control">
                         </div>
                       </div>
-                    </div><!-- /.user-corporate-mail -->
-
-
-                    <!-- device-model -->
-                    <div class="col-md-4">
-                      <!-- model -->
-                    <div class="form-group">
-                        <label>Área:</label>
-                        <select id="txt-device-model" name="txt-device-model" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                          <option value="0">- - Seleccionar - -</option>
-                          <option value="1">Gerencia de Obras</option>
-                          <option value="2">Sistemas</option>
-                          <option value="3">Soporte Técnico</option>
-                        </select>
-                      </div>
-                    </div><!-- /.device-model -->
-
-                    <!-- device-model -->
-                    <div class="col-md-4">
-                      
-                      <!-- model -->
-                    <div class="form-group">
-                        <label>Cargo:</label>
-                        <select id="txt-device-model" name="txt-device-model" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                          <option value="0">- - Seleccionar - -</option>
-                          <option value="1">Responsable</option>
-                          <option value="2">Asistente</option>
-                          <option value="3">Auxiliar</option>
-                        </select>
-                      </div>
-                    </div><!-- /.device-model -->
-
-                    
+                    </div><!-- /.employee-corporate-mail -->
 
                   </div><!-- /.row-3 -->
-
                   
                   <!-- row-4 -->
                   <div class="row">
-                    <!-- device-observation  -->
+
+                    <!-- person-observation  -->
                     <div class="col-md-12">
-                        <div class="form-group">
-                          <label>Observación</label>
-                          <textarea id="txt-device-observation" name="txt-device-observation" class="form-control" rows="3" placeholder="Ingresar una observación ..." style="min-height: 70%;min-width: 100%;max-width: 100%;"></textarea>
-                        </div>
-                      </div><!-- /.device-observation  -->
+                      <div class="form-group">
+                        <label>Observación</label>
+                        <textarea name="person-create-txtObservation" class="form-control" rows="3" placeholder="Ingresar una observación ..." style="min-height: 70%;min-width: 100%;max-width: 100%;"></textarea>
+                      </div>
+                    </div><!-- /.person-observation  -->
+
                   </div><!-- /.row-4 -->
 
                   <!-- row-5 -->
                   <div class="row">
+
                     <!-- send-button -->
                     <div class="col-md-12" style="margin-bottom: 10px;">
-                        <button id="btn-device-submit" name="btn-device-submit" type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Persona</button>
-                      </div><!-- /.send-button -->
+                      <button id="person-create-btnSubmit" name="person-create-btnSubmit" type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Persona</button>
+                    </div><!-- /.send-button -->
     
-                      <!-- cancel-button -->
-                      <div class="col-md-12">
-                        <button id="btn-device-cancel" name="btn-device-cancel" type="button" class="btn btn-default btn-block"><i class="fa fa-times-circle"></i> Cancelar</button>
-                      </div><!-- /.cancel-button -->
+                    <!-- cancel-button -->
+                    <div class="col-md-12">
+                      <button id="person-create-btnCancel" name="person-create-btnCancel" type="button" class="btn btn-default btn-block"><i class="fa fa-times-circle"></i> Cancelar</button>
+                    </div><!-- /.cancel-button -->
+
                   </div><!-- /.row-5 -->
 
                 </form><!-- user-register-form  -->
@@ -1066,99 +1058,8 @@
       autoclose: true
     });
 
-    //Initialize device-datatable
-    var table =$('#device-datatable').DataTable(
-    {
-      'paging'      : false,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : false,
-      'autoWidth'   : true,
-      "scrollX"     : true,
-      "language"    : {"url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"},
-      columnDefs: [{
-            orderable: false,
-            className: 'select-checkbox',
-            targets:   0
-        }],
-        select: {
-            style:    'os',
-            selector: 'td:first-child'
-        },
-        order: [[ 1, 'asc' ]]
+    /*-----------------------------------------------------------------------------*/
 
-    });
-
-    //device-datatable add item
-    function demo_table()
-    {
-      var rowNode = table
-      .row.add( [ ''
-                  ,'<select id="txt-device-type" name="txt-device-type" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">'
-                    +'<option value="0">- - Seleccionar - -</option>'
-                    +'<option value="1">Computadora</option>'
-                    +'<option value="2">Laptop</option>'
-                    +'<option value="3">Impresora</option>'
-                    +'<option value="4">Teclado</option>'
-                    +'</select>'
-                  , '<input type="text" class="form-control" name="component_manufacturer[]">'
-                  , '<input type="text" class="form-control" name="component_model[]">'
-                  , '<input type="text" class="form-control" name="component_serial_number[]">'
-                  , '<input type="text" class="form-control" name="component_serial_detail[]">'
-                ])
-      .draw()
-      .node();
-      $(rowNode);
-    };
-
-    //Get data on clic datatable-row
-    var table_row_selected=0;
-    
-    $('#device-datatable tbody').on( 'click', 'tr', function () 
-    {
-
-      //Show data on console
-      console.log( table.row( this ).data() );
-
-      //row selected
-      /*if ( $(this).hasClass('selected') ) 
-      {
-        $(this).removeClass('selected');
-        table_row_selected=0;
-      }
-      else 
-      {
-        table.$('tr.selected').removeClass('selected');
-        $(this).addClass('selected');
-        table_row_selected=1;
-      }
-      */
-    });
-
-    //device-datatable remove component 
-    $('#device-remove-component').click( function () {
-      
-      var rows = table.rows( '.selected' );
-
-      if(rows.count()!=0)
-      {
-        table.rows('.selected').remove().draw( false );
-      }
-      else
-      {
-        swal("Faltó un paso!", "Primero debes seleccionar una fila.", "warning");
-      }
-    
-    });
-
-    //device-datatable add component
-    $('#device-add-component').click( function () {
-      demo_table();
-    });
-
-    //device-datable add example row
-    //demo_table();
 
     //device submit button
     $("#btn-device-submit").click(function()
