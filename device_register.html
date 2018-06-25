@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
 </head>
-<body class="hold-transition skin-red sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -530,269 +530,262 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Usuario
-        <small>Registrar Usuario</small>
+        Equipos
+        <small>Registrar Equipo</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Usuario</a></li>
-        <li class="active">Registrar Usuario</li>
+        <li><a href="#">Equipos</a></li>
+        <li class="active">Registrar Equipo</li>
       </ol>
     </section>
 
     <!-- main-content -->
     <section class="content">
       
-     <div class="row">
-        <!-- left-box-->
-      <div class="col-md-12" >
+      <!-- left-box-->
+      <div class="col-md-4" style="padding-left: 0;">
         
         <!-- device-details -->
         <div class="box box-danger">
           
           <!-- box-header -->
           <div class="box-header with-border">
-            <h3 class="box-title">Datos del Usuario</h3>
+            <h3 class="box-title">Datos del Equipo</h3>
           </div><!-- /.box-header -->
           
           <!-- box-body -->
           <div class="box-body" >
             
-           
+            <!-- box-body-row-->
+            <div class="row">
 
               <!-- box-body-col -->
               <div class="col-md-12">
 
-                <!-- user-register-form  -->
-                <form id="frm-user-register">
+                <!-- device-register-form  -->
+                <form id="frm-device-register">
 
-                    <div class="callout callout-default">
-                      <h4>Datos Personales</h4>
-      
-                      <p>Ingrese la información básica de la persona</p>
+                  <!-- device-type -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Tipo:</label>
+                        <select id="txt-device-type" name="txt-device-type" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                          <option value="0">- - Seleccionar - -</option>
+                          <option value="1">Computadora</option>
+                          <option value="2">Laptop</option>
+                          <option value="3">Impresora</option>
+                          <option value="4">Teclado</option>
+                        </select>
+                      </div>
+                  </div><!-- /.device-type -->
+
+                  <!-- Iventory Code -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Cod. Inventario:</label>
+                      <div class="input-group" data-toggle="tooltip" data-placement="bottom" title="Este código se generará automáticamente" style="cursor: pointer;">
+                        <div class="input-group-addon">
+                          <i class="fa fa-tag" title="Este código se generará automáticamente"></i>
+                        </div>
+                        <input id="txt-device-inventory-code" name="txt-device-inventory-code" type="text" class="form-control" disabled value="TEAPC0001" style="cursor: pointer;">
+                      </div>
                     </div>
+                  </div><!-- /.Iventory Code -->
                   
-                  <!-- row-1 -->
-                  <div class="row">
-                    <!-- user-dni -->
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label>DNI: <small></small></label>
-                        <div class="input-group">
-                          <div class="input-group-addon">
-                            <i class="fa fa-credit-card"></i>
-                          </div>
-                          <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div><!-- /.user-dni -->
-
-                    <!-- user-name -->
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label>Nombres: <small></small></label>
-                        <div class="input-group">
-                          <div class="input-group-addon">
-                            <i class="fa fa-user"></i>
-                          </div>
-                          <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div><!-- /.user-name -->
-                    
-                    <!-- user-last-name-1 -->
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label>Apellido Paterno: <small></small></label>
-                        <div class="input-group">
-                          <div class="input-group-addon">
-                            <i class="fa fa-user"></i>
-                          </div>
-                          <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div><!-- /.user-last-name-1 -->
-
-                    <!-- user-last-name-2 -->
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label>Apellido Materno:</label>
-                        <div class="input-group">
-                          <div class="input-group-addon">
-                            <i class="fa fa-user"></i>
-                          </div>
-                          <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div><!-- /.duser-last-name-2 -->
-                  </div><!-- /.row-1 -->
-
-                  <!-- row-2 -->
-                  <div class="row">
-
-                    <!-- user-last-name-2 -->
-                    <div class="col-md-3">
-                        <div class="form-group">
-                          <label>Dirección / Departamento / Ciudad:</label>
-                          <div class="input-group">
-                            <div class="input-group-addon">
-                              <i class="fa fa-home"></i>
-                            </div>
-                            <input id="txt-user-dni" name="txt-user-dni" type="text" class="form-control">
-                          </div>
-                        </div>
-                      </div><!-- /.duser-last-name-2 -->
-
-                    <!-- user-genre -->
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label>Género:</label>
-                        <select id="txt-device-model" name="txt-device-model" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                          <option value="0">- - Seleccionar - -</option>
-                          <option value="1">Masculino</option>
-                          <option value="2">Femenino</option>
-                        </select>
-                      </div>
-                    </div><!-- /.user-genre -->
-                    
-                    <!-- user-phone-number -->
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label>Teléfono / Celular:</label>
-                        <div class="input-group">
-                          <div class="input-group-addon">
-                            <i class="fa fa-phone"></i>
-                          </div>
-                          <input id="txt-device-serial-number" name="txt-device-serial-number" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div><!-- /.user-phone-number -->
-
-                    <!-- user-personal-mail -->
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label>Correo electrónico Personal:</label>
-                        <div class="input-group">
-                          <div class="input-group-addon">
-                            <i class="fa fa-envelope-o"></i>
-                          </div>
-                          <input id="txt-device-serial-number" name="txt-device-serial-number" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div><!-- /.user-personal-mail -->
-                  </div><!-- /.row-2 -->
-
-                  <div class="row">
-                      <div class="form-group">
-                          <div class="col-lg-12">
-                            <div class="checkbox">
-                              <label>
-                                <input id="user-is-employee" type="checkbox"> Es empleado
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                  </div>
-
-                  <hr>
-
-                  
-
-                  <!-- row-3 -->
-                  <div id="user-employee-data" class="row" style="display: none">
-
-                      <div class="col-md-12">
-                          <div class="callout callout-default">
-                              <h4>Información Laboral</h4>
-              
-                              <p>Ingrese la información laboral de la persona</p>
-                            </div>
-                      </div>
-
-                    <!-- user-corporate-mail -->
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <label>Correo electrónico Corporativo:</label>
-                        <div class="input-group">
-                          <div class="input-group-addon">
-                            <i class="fa fa-envelope-o"></i>
-                          </div>
-                          <input id="txt-device-serial-number" name="txt-device-serial-number" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div><!-- /.user-corporate-mail -->
-
-
-                    <!-- device-model -->
-                    <div class="col-md-4">
-                      <!-- model -->
+                  <!-- manufacturer -->
+                  <div class="col-md-6">
                     <div class="form-group">
-                        <label>Área:</label>
-                        <select id="txt-device-model" name="txt-device-model" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                      <label>Fabricante</label>
+                      <select id="txt-device-manufacturer" name="txt-device-manufacturer" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
                           <option value="0">- - Seleccionar - -</option>
-                          <option value="1">Gerencia de Obras</option>
-                          <option value="2">Sistemas</option>
-                          <option value="3">Soporte Técnico</option>
-                        </select>
-                      </div>
-                    </div><!-- /.device-model -->
-
-                    <!-- device-model -->
-                    <div class="col-md-4">
-                      
-                      <!-- model -->
-                    <div class="form-group">
-                        <label>Cargo:</label>
-                        <select id="txt-device-model" name="txt-device-model" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
-                          <option value="0">- - Seleccionar - -</option>
-                          <option value="1">Responsable</option>
-                          <option value="2">Asistente</option>
-                          <option value="3">Auxiliar</option>
-                        </select>
-                      </div>
-                    </div><!-- /.device-model -->
-
+                          <option value="1">Genérico</option>
+                          <option value="2">HP</option>
+                          <option value="3">EPSON</option>
+                          <option value="4">KINGSTON</option>
+                      </select>
+                    </div>
+                  </div><!-- /.manufacturer -->
                     
+                  <!-- device-model -->
+                  <div class="col-md-6">
+                    <!-- model -->
+                  <div class="form-group">
+                      <label>Modelo</label>
+                      <select id="txt-device-model" name="txt-device-model" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                        <option value="0">- - Seleccionar - -</option>
+                        <option value="1">Genérico</option>
+                        <option value="2">DV6-2170US</option>
+                        <option value="3">G5 250</option>
+                      </select>
+                    </div>
+                  </div><!-- /.device-model -->
 
-                  </div><!-- /.row-3 -->
-
-                  
-                  <!-- row-4 -->
-                  <div class="row">
-                    <!-- device-observation  -->
-                    <div class="col-md-12">
-                        <div class="form-group">
-                          <label>Observación</label>
-                          <textarea id="txt-device-observation" name="txt-device-observation" class="form-control" rows="3" placeholder="Ingresar una observación ..." style="min-height: 70%;min-width: 100%;max-width: 100%;"></textarea>
+                  <!-- device-serial-number -->
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Número de Serie: <small>(Dejar en blanco si no lo posee)</small></label>
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                          <i class="fa fa-credit-card"></i>
                         </div>
-                      </div><!-- /.device-observation  -->
-                  </div><!-- /.row-4 -->
+                        <input id="txt-device-serial-number" name="txt-device-serial-number" type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div><!-- /.device-serial-number -->
+                  
+                  <!-- device-status -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Estado</label>
+                      <select id="txt-device-status" name="txt-device-status" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;" disabled>
+                        <option>Libre</option>
+                        <option>Asignado</option>
+                        <option>Baja</option>
+                      </select>
+                    </div>
+                  </div><!-- /.device-status -->
 
-                  <!-- row-5 -->
-                  <div class="row">
-                    <!-- send-button -->
-                    <div class="col-md-12" style="margin-bottom: 10px;">
-                        <button id="btn-device-submit" name="btn-device-submit" type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Persona</button>
-                      </div><!-- /.send-button -->
-    
-                      <!-- cancel-button -->
-                      <div class="col-md-12">
-                        <button id="btn-device-cancel" name="btn-device-cancel" type="button" class="btn btn-default btn-block"><i class="fa fa-times-circle"></i> Cancelar</button>
-                      </div><!-- /.cancel-button -->
-                  </div><!-- /.row-5 -->
+                  <!-- device-condition -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Condición</label>
+                      <select id="txt-device-condition" name="txt-device-condition" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                        <option value="1">Bueno</option>
+                        <option value="2">Regular</option>
+                        <option value="3">Malo</option>
+                      </select>
+                    </div>
+                  </div><!-- /.device-condition -->
 
-                </form><!-- user-register-form  -->
+                  <!-- device-inventory-date -->
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Fecha de Inventario:</label>
+                      <div class="input-group date">
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input id="txt-device-inventory-date" name="txt-device-inventory-date" type="text" class="form-control pull-right" id="datepicker">
+                      </div>
+                    </div>
+                  </div><!-- /.device-inventory-date -->
+
+                  <!-- device-observation  -->
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Observación</label>
+                      <textarea id="txt-device-observation" name="txt-device-observation" class="form-control" rows="3" placeholder="Ingresar una observación ..." style="min-height: 70%;min-width: 100%;max-width: 100%;"></textarea>
+                    </div>
+                  </div><!-- /.device-observation  -->
+
+                  <!-- send-button -->
+                  <div class="col-md-12" style="margin-bottom: 10px;">
+                    <button id="btn-device-submit" name="btn-device-submit" type="button" class="btn btn-default btn-block"><i class="fa fa-fw fa-save"></i> Registra Equipo</button>
+                  </div><!-- /.send-button -->
+
+                  <!-- cancel-button -->
+                  <div class="col-md-12">
+                    <button id="btn-device-cancel" name="btn-device-cancel" type="button" class="btn btn-default btn-block"><i class="fa fa-times-circle"></i> Cancelar</button>
+                  </div><!-- /.cancel-button -->
+
+                </form><!-- device-register-form  -->
 
               </div><!-- /.box-body-col -->
 
+            </div><!-- /.box-body-row -->
 
           </div><!-- /.box-body -->
 
         </div><!-- /.device-details -->
 
       </div><!-- /.left-box-->
-     </div>
-     
+
+      <!-- right box -->
+      <div class="col-md-8">
+        
+        <!-- device-specs -->
+        <div class="box box-danger">
+
+          <!-- box-header -->
+          <div class="box-header">
+            <h3 class="box-title">Especificaciones Técnicas  </h3> 
+          </div><!-- /.box-header -->
+
+          <!-- box-body -->
+          <div class="box-body" style="min-height: 580px">
+            
+            <!-- device-specs-buttons -->
+            <div class="col-md-12">
+              <div class="row" style="margin-top: 10px;margin-bottom: 20px;">
+                
+                <!-- add-component-button -->
+                <div class="col-md-offset-6 col-md-3" >
+                  <button id="device-add-component" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Añadir componente</button>
+                </div><!-- /.add-component-button -->
+                
+                <!-- remove-component-button -->
+                <div class="col-md-3" >
+                  <button id="device-remove-component" type="button" class="btn btn-block btn-default"><i class="fa fa-plus-circle" style="padding-right: 5px"></i> Quitar componente</button>
+                </div><!-- /.remove-component-button -->
+
+              </div>
+            </div><!-- device-specs-buttons -->
+            
+            <!-- device-specs-datatable -->
+            <div class="col-md-12">
+              
+              <!-- table -->
+              <table id="device-datatable" class="table table-bordered table-striped" style="width:100%">
+
+                <!-- table-head -->
+                <thead>
+
+                  <!-- columns-name -->
+                  <tr>
+                      <th><!--dont delete - for checkbox--></th>
+                      <th class="text-center">Componente</th>
+                      <th class="text-center">Fabricante</th>
+                      <th class="text-center">Modelo</th>
+                      <th class="text-center"># Serie</th>
+                      <th class="text-center">Detalle</th>
+                  </tr><!-- /.columns-name -->
+
+                </thead><!-- /.table-head -->
+
+                <!-- table-body -->
+                <tbody>
+                  <tr>
+                      <td><!--dont delete - for checkbox--></td>
+                      <td>
+                          <select id="txt-device-type" name="txt-device-type" class="form-control select2" data-placeholder="- - Seleccionar - -" style="width: 100%;">
+                              <option value="0">- - Seleccionar - -</option>
+                              <option value="1">Computadora</option>
+                              <option value="2">Laptop</option>
+                              <option value="3">Impresora</option>
+                              <option value="4">Teclado</option>
+                          </select>
+                      </td>
+                      <td><input type="text" class="form-control" name="component_manufacturer[]"></td>
+                      <td><input type="text" class="form-control" name="component_model[]"></td>
+                      <td><input type="text" class="form-control" name="component_serial_number[]"></td>
+                      <td><input type="text" class="form-control" name="component_detail[]"></td>
+                      
+                  </tr>
+
+                                 
+                </tbody><!-- /.table-body -->
+                
+              </table><!-- /.table -->
+
+            </div><!-- /.device-specs-datatable -->
+            
+          </div><!-- /.box-body -->
+
+        </div><!-- /.device-specs -->
+        
+      </div><!-- /.right box -->
+
     </section><!-- /.main-content -->
    
   </div><!-- /.content-wrapper -->
@@ -1173,14 +1166,6 @@
       //swal("Oops!", "Ocurrió un error al registrar el equipo, inténtalo nuevamente.", "error");
     
     });
-
-
-    $("#user-is-employee").click(function()
-    {
-      $('#user-employee-data').slideToggle();
-    });
-
-    
     
   });
 </script>
